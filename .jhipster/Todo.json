@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dueDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20180525175627",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "todo",
+    "jpaMetamodelFiltering": true,
+    "pagination": "pagination"
+}

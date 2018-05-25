@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="todo">
+            <h2><span jhiTranslate="jhipster5Java10App.todo.detail.title">Todo</span> {{todo.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipster5Java10App.todo.title">Title</span></dt>
+                <dd>
+                    <span>{{todo.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipster5Java10App.todo.description">Description</span></dt>
+                <dd>
+                    <span>{{todo.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipster5Java10App.todo.dueDate">Due Date</span></dt>
+                <dd>
+                    <span>{{todo.dueDate}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <span class="fas fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/todo', todo.id, 'edit']"
+                    class="btn btn-primary">
+                <span class="fas fa-pencil-alt"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
